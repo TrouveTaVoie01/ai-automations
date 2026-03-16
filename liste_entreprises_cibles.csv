@@ -1,0 +1,101 @@
+entreprise,email,type,secteur
+Mistral AI,careers@mistral.ai,Startup IA,LLM / Modèles de langage
+Dust,jobs@dust.tt,Startup IA,Agents IA
+LightOn,contact@lighton.ai,Startup IA,IA générative
+PhotoRoom,jobs@photoroom.com,Startup IA,Édition image IA
+Hugging Face,jobs@huggingface.co,Startup IA,Plateforme ML
+Dataiku,careers@dataiku.com,Scale-up IA,Plateforme IA collaborative
+Contentsquare,careers@contentsquare.com,Scale-up,Analyse comportementale
+Tomorro,jobs@tomorro.com,Startup,CLM / Contrats IA
+Artefact,careers@artefact.com,Cabinet conseil,Data & IA Marketing
+Sia Partners,recrutement@sia-partners.com,Cabinet conseil,Conseil IA
+Quantmetry,recrutement@quantmetry.com,Cabinet conseil,Conseil IA
+Axionable,contact@axionable.com,Cabinet conseil,IA durable
+La Javaness,contact@lajavaness.com,Startup IA,Computer Vision
+Converteo,recrutement@converteo.com,Cabinet conseil,Data Science
+Amari Agency,contact@amari-agency.fr,Agence,Automatisation IA
+Hyperstack,contact@hyperstack.co,Agence,Automatisation N8N
+Sequance,contact@sequance.io,Agence,Automatisation
+Naotech,contact@naotech.io,Agence,Automatisation N8N
+Monk AI,jobs@monk.ai,Startup IA,Computer Vision
+Pyl.tech,contact@pyl.tech,ESN,Cloud & IA
+AI6 Technologies,contact@ai6.io,Startup,IA / SaaS
+Hopia,contact@hopia.eu,Startup IA,Santé IA
+Kleep,contact@kleep.ai,Startup IA,E-commerce IA
+Dext France,careers@dext.com,FinTech IA,Comptabilité IA
+Galadrim,recrutement@galadrim.fr,Agence dev,Web / Mobile / IA
+Webnet,recrutement@webnet.fr,ESN,Développement IA
+Alegria Group,contact@alegria.group,Startup,No-code / IA
+Nabla,careers@nabla.com,Startup IA,Santé IA
+Poolside,careers@poolside.ai,Startup IA,Code generation
+Bioptimus,contact@bioptimus.com,Startup IA,Bio IA
+Owkin,careers@owkin.com,Startup IA,Santé IA
+Giskard,contact@giskard.ai,Startup IA,Testing IA
+Aqemia,careers@aqemia.com,Startup IA,Pharma IA
+Silkhom,contact@silkhom.com,Cabinet recrutement,IT / IA
+Licorne Society,hello@licornesociety.com,Cabinet recrutement,Tech / IA
+DataRecrutement,contact@datarecrutement.fr,Cabinet recrutement,Data / IA
+Danem People,contact@danempeople.fr,Cabinet recrutement,Big Data / IA
+Infotem,contact@infotem.fr,ESN,Services numériques
+IA Agency,contact@ia.agency,Agence IA,Automatisation
+Koïno,contact@koino.fr,Agence,IA & Data
+Plateya,contact@plateya.fr,Agence,Automatisation
+BGB Formation,contact@bgbformation.fr,Formation,Automatisation no-code
+Capgemini,recrutement@capgemini.com,ESN,Conseil Tech
+Accenture,recrutement.france@accenture.com,ESN,Conseil Tech
+Sopra Steria,recrutement@soprasteria.com,ESN,Services numériques
+Atos,careers@atos.net,ESN,Cloud / IA
+CGI France,recrutement@cgi.com,ESN,IT / IA
+Devoteam,recrutement@devoteam.com,ESN,Cloud / IA
+Onepoint,recrutement@groupeonepoint.com,ESN,Conseil digital
+Octo Technology,recrutement@octo.com,Cabinet conseil,Tech / IA
+Wavestone,recrutement@wavestone.com,Cabinet conseil,Conseil digital
+Publicis Sapient,careers@publicissapient.com,Agence digital,Transformation IA
+Ekimetrics,careers@ekimetrics.com,Cabinet conseil,Data Science IA
+eleven strategy,contact@eleven-strategy.com,Cabinet conseil,Data / IA
+fifty-five,recrutement@fifty-five.com,Cabinet conseil,Data / Marketing
+Saagie,contact@saagie.com,Startup,Plateforme Data IA
+Craft AI,contact@craft.ai,Startup IA,MLOps
+Preligens (Safran),recrutement@preligens.com,Startup IA,Défense IA
+Shift Technology,careers@shift-technology.com,Startup IA,Assurance IA
+Alan,jobs@alan.com,Scale-up,Assurance santé IA
+Qonto,jobs@qonto.com,Scale-up,FinTech
+Pennylane,jobs@pennylane.com,Scale-up,Comptabilité IA
+Payfit,jobs@payfit.com,Scale-up,RH / Paie IA
+Swile,jobs@swile.co,Scale-up,RH Tech
+Spendesk,careers@spendesk.com,Scale-up,FinTech
+Doctrine,contact@doctrine.fr,LegalTech,IA juridique
+Zelros,contact@zelros.com,Startup IA,Assurance IA
+Descartes Underwriting,careers@descartesunderwriting.com,Startup IA,Assurance IA
+Deepomatic,contact@deepomatic.com,Startup IA,Computer Vision
+Golem.ai,contact@golem.ai,Startup IA,NLP
+Yseop,contact@yseop.com,Startup IA,NLG
+Tinyclues,contact@tinyclues.com,Startup IA,Marketing IA
+AB Tasty,careers@abtasty.com,Scale-up,Optimisation IA
+Algolia,careers@algolia.com,Scale-up,Search IA
+Sendinblue (Brevo),jobs@brevo.com,Scale-up,Marketing automation
+Aircall,jobs@aircall.io,Scale-up,Téléphonie IA
+Botify,careers@botify.com,Scale-up,SEO IA
+MeilliSearch (Meilisearch),jobs@meilisearch.com,Startup,Search engine
+Scaleway,careers@scaleway.com,Cloud,Infrastructure IA
+OVHcloud,recrutement@ovhcloud.com,Cloud,Infrastructure
+Clever Cloud,contact@clever-cloud.com,Cloud,PaaS
+Platform.sh,careers@platform.sh,Cloud,PaaS
+Believe,recrutement@believe.com,Scale-up,Music Tech IA
+Deezer,jobs@deezer.com,Scale-up,Music IA
+Dailymotion,jobs@dailymotion.com,Scale-up,Video IA
+Criteo,careers@criteo.com,Scale-up,AdTech IA
+Mirakl,jobs@mirakl.com,Scale-up,Marketplace
+BackMarket,jobs@backmarket.com,Scale-up,E-commerce
+ManoMano,careers@manomano.com,Scale-up,E-commerce IA
+Vestiaire Collective,careers@vestiairecollective.com,Scale-up,E-commerce IA
+BlaBlaCar,jobs@blablacar.com,Scale-up,Mobilité IA
+Doctolib,recrutement@doctolib.com,Scale-up,Santé Tech
+Meero,contact@meero.com,Startup IA,Photo IA
+Lunit,contact@lunit.io,Startup IA,Imagerie médicale
+Lifen,contact@lifen.fr,Startup,Santé numérique
+OpenClassrooms,recrutement@openclassrooms.com,EdTech,Formation
+Jedha,contact@jedha.co,EdTech,Formation Data/IA
+Le Wagon,contact@lewagon.com,EdTech,Formation code/IA
+Wild Code School,contact@wildcodeschool.com,EdTech,Formation code
+Ironhack,hello@ironhack.com,EdTech,Formation Tech
