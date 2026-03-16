@@ -138,8 +138,8 @@ def generer_pdf(resultat):
     pdf.add_page()
 
     # Police Unicode
-    pdf.add_font("DejaVu", "", "C:/Windows/Fonts/arial.ttf", uni=True)
-    pdf.add_font("DejaVu", "B", "C:/Windows/Fonts/arialbd.ttf", uni=True)
+    pdf.add_font("DejaVu", "", "C:/Windows/Fonts/arial.ttf")
+    pdf.add_font("DejaVu", "B", "C:/Windows/Fonts/arialbd.ttf")
 
     # Titre
     pdf.set_font("DejaVu", "B", 18)
