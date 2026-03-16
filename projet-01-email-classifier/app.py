@@ -9,6 +9,7 @@ en catégories via l'API Claude, avec mode batch et dashboard.
 import streamlit as st
 import pandas as pd
 import anthropic
+import plotly.express as px
 import json
 import time
 import io
@@ -142,11 +143,21 @@ if "resultat_unique" not in st.session_state:
 with tab1:
     st.subheader("Classifier un email")
 
-    email_input = st.text_area(
-        "Collez le contenu de l'email ici :",
-        height=200,
-        placeholder="Bonjour, je n'arrive pas à accéder à mon compte depuis ce matin..."
-    )
+    EXEMPLE_EMAIL = "Bonjour,\n\nJe n'arrive plus à me connecter à mon compte depuis ce matin. J'ai essayé de réinitialiser mon mot de passe 3 fois mais je ne reçois aucun email de confirmation.\n\nMon identifiant est marie.dupont@entreprise.fr et c'est assez urgent car j'ai des documents importants à récupérer pour une réunion cet après-midi.\n\nMerci de votre aide rapide.\n\nCordialement,\nMarie Dupont"
+
+    col_input, col_example = st.columns([4, 1])
+    with col_example:
+        st.write("")
+        st.write("")
+        use_example = st.button("Charger un exemple")
+
+    with col_input:
+        email_input = st.text_area(
+            "Collez le contenu de l'email ici :",
+            height=200,
+            value=EXEMPLE_EMAIL if use_example else "",
+            placeholder="Bonjour, je n'arrive pas à accéder à mon compte depuis ce matin..."
+        )
 
     col_btn, col_info = st.columns([1, 3])
     with col_btn:
@@ -296,7 +307,6 @@ with tab3:
         with col_chart1:
             st.markdown("#### Répartition par catégorie")
             cat_counts = df_r["categorie"].value_counts()
-            import plotly.express as px
             fig = px.pie(
                 values=cat_counts.values,
                 names=cat_counts.index,
