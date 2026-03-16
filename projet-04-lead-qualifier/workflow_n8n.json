@@ -1,0 +1,117 @@
+{
+  "name": "Lead Qualifier - Qualification automatique",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": { "__rl": true, "value": "={{ $env.GOOGLE_SHEET_LEADS_ID }}", "mode": "id" },
+        "sheetName": { "__rl": true, "value": "Leads", "mode": "name" },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "id": "trigger-sheet",
+      "name": "Google Sheet - Nouveau lead",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-20250514\",\n  \"max_tokens\": 600,\n  \"messages\": [{\"role\": \"user\", \"content\": \"Qualifie ce lead commercial. Entreprise: {{ $json.entreprise }}, Email: {{ $json.email }}, Message: {{ $json.message }}. Retourne un JSON avec score (1-10), categorie (Hot/Warm/Cold), raison_score, reponse_personnalisee.\"}]\n}",
+        "options": {}
+      },
+      "id": "claude-qualify",
+      "name": "Claude - Qualification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst qualification = JSON.parse(response.content[0].text);\nqualification.entreprise = $('Google Sheet - Nouveau lead').first().json.entreprise;\nqualification.email = $('Google Sheet - Nouveau lead').first().json.email;\nqualification.timestamp = new Date().toISOString();\nreturn [{ json: qualification }];"
+      },
+      "id": "parse-qualify",
+      "name": "Parser la réponse",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.categorie }}",
+              "rightValue": "Hot",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ]
+        }
+      },
+      "id": "if-hot",
+      "name": "IF Hot ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $env.SALES_EMAIL }}",
+        "subject": "=🔥 LEAD HOT : {{ $json.entreprise }} (Score: {{ $json.score }}/10)",
+        "emailType": "text",
+        "message": "=Un lead HOT vient d'arriver !\n\nEntreprise : {{ $json.entreprise }}\nEmail : {{ $json.email }}\nScore : {{ $json.score }}/10\nRaison : {{ $json.raison_score }}\n\nRéponse suggérée :\n{{ $json.reponse_personnalisee }}\n\nAction requise : contacter dans les 2 heures !"
+      },
+      "id": "email-hot",
+      "name": "Alerte Lead Hot",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1250, 200]
+    },
+    {
+      "parameters": {
+        "documentId": { "__rl": true, "value": "={{ $env.GOOGLE_SHEET_LEADS_ID }}", "mode": "id" },
+        "sheetName": { "__rl": true, "value": "Scores", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "entreprise": "={{ $json.entreprise }}",
+            "email": "={{ $json.email }}",
+            "score": "={{ $json.score }}",
+            "categorie": "={{ $json.categorie }}",
+            "raison": "={{ $json.raison_score }}"
+          }
+        }
+      },
+      "id": "gsheet-score",
+      "name": "Log Score",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1250, 400]
+    }
+  ],
+  "connections": {
+    "Google Sheet - Nouveau lead": { "main": [[{ "node": "Claude - Qualification", "type": "main", "index": 0 }]] },
+    "Claude - Qualification": { "main": [[{ "node": "Parser la réponse", "type": "main", "index": 0 }]] },
+    "Parser la réponse": { "main": [[{ "node": "IF Hot ?", "type": "main", "index": 0 }]] },
+    "IF Hot ?": {
+      "main": [
+        [{ "node": "Alerte Lead Hot", "type": "main", "index": 0 }],
+        [{ "node": "Log Score", "type": "main", "index": 0 }]
+      ]
+    },
+    "Alerte Lead Hot": { "main": [[{ "node": "Log Score", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "lead-qualifier", "id": "5" }, { "name": "ai-automation", "id": "2" }]
+}
