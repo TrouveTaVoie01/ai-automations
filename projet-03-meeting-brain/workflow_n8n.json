@@ -1,0 +1,104 @@
+{
+  "name": "Meeting Brain - Analyse automatique de réunions",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "analyze-meeting",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-meeting",
+      "name": "Webhook - Réception transcript",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-20250514\",\n  \"max_tokens\": 1500,\n  \"messages\": [{\"role\": \"user\", \"content\": \"Analyse ce transcript de réunion et retourne un JSON avec: resume_executif, decisions, actions (action/responsable/deadline/priorite), points_en_suspens. Transcript: {{ $json.body.transcript }}\"}]\n}",
+        "options": {}
+      },
+      "id": "claude-meeting",
+      "name": "Claude - Analyse réunion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst analysis = JSON.parse(response.content[0].text);\nanalysis.timestamp = new Date().toISOString();\nreturn [{ json: analysis }];"
+      },
+      "id": "parse-meeting",
+      "name": "Parser la réponse",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $env.ALERT_EMAIL }}",
+        "subject": "=Compte-rendu : {{ $json.sujet_principal }}",
+        "emailType": "text",
+        "message": "=RÉSUMÉ EXÉCUTIF\n{{ $json.resume_executif }}\n\nDÉCISIONS\n{{ $json.decisions.map((d, i) => (i+1) + '. ' + d.decision).join('\\n') }}\n\nACTIONS\n{{ $json.actions.map((a, i) => (i+1) + '. ' + a.action + ' (Resp: ' + a.responsable + ', Deadline: ' + a.deadline + ')').join('\\n') }}\n\nPOINTS EN SUSPENS\n{{ $json.points_en_suspens.map((p, i) => (i+1) + '. ' + p.point).join('\\n') }}"
+      },
+      "id": "email-summary",
+      "name": "Email - Résumé",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1000, 200]
+    },
+    {
+      "parameters": {
+        "documentId": { "__rl": true, "value": "={{ $env.GOOGLE_SHEET_ID }}", "mode": "id" },
+        "sheetName": { "__rl": true, "value": "Actions", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "sujet": "={{ $json.sujet_principal }}",
+            "actions": "={{ JSON.stringify($json.actions) }}",
+            "decisions": "={{ JSON.stringify($json.decisions) }}"
+          }
+        }
+      },
+      "id": "gsheet-actions",
+      "name": "Log Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1000, 400]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "respond-meeting",
+      "name": "Répondre",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1250, 300]
+    }
+  ],
+  "connections": {
+    "Webhook - Réception transcript": { "main": [[{ "node": "Claude - Analyse réunion", "type": "main", "index": 0 }]] },
+    "Claude - Analyse réunion": { "main": [[{ "node": "Parser la réponse", "type": "main", "index": 0 }]] },
+    "Parser la réponse": { "main": [[{ "node": "Email - Résumé", "type": "main", "index": 0 }, { "node": "Log Google Sheet", "type": "main", "index": 0 }]] },
+    "Email - Résumé": { "main": [[{ "node": "Répondre", "type": "main", "index": 0 }]] },
+    "Log Google Sheet": { "main": [[{ "node": "Répondre", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "meeting-brain", "id": "4" }, { "name": "ai-automation", "id": "2" }]
+}

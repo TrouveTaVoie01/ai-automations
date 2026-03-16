@@ -1,0 +1,32 @@
+Réunion : Post-mortem incident serveur du 5 mars
+Date : 7 mars 2024
+Durée : 1 heure
+Participants : Karim (CTO), Léa (DevOps), Antoine (Backend), Nadia (Support client)
+
+Karim : On est là pour analyser l'incident de dimanche dernier. Notre API principale a été down pendant 3 heures, de 14h à 17h. C'est inacceptable. Léa, tu nous fais le point ?
+
+Léa : Le problème est venu d'une saturation de la base de données PostgreSQL. On avait une requête mal optimisée dans le module de reporting qui faisait un full scan sur la table orders, 12 millions de lignes. Le CPU du serveur est monté à 100% et tout le reste a été impacté.
+
+Antoine : C'est ma faute. J'ai déployé cette requête vendredi à 17h sans passer par le processus de review SQL. Je pensais que c'était une modification mineure.
+
+Karim : On ne blâme personne, on cherche des solutions. Antoine, je comprends, mais la règle est claire : toute requête touchant une table de plus d'un million de lignes doit être reviewée. On va renforcer ça.
+
+Nadia : Côté clients, on a reçu 47 tickets et 12 appels pendant l'incident. J'ai dû envoyer un email de communication à 500 clients impactés. Le principal reproche c'est qu'on n'a pas communiqué assez vite. On a attendu 1h30 avant d'envoyer le premier message.
+
+Karim : Décision numéro 1 : on met en place une procédure de communication d'incident automatique. Nadia, tu rédiges un template de communication d'incident pour la fin de la semaine.
+
+Léa : J'ai identifié 3 actions techniques. Premièrement, je mets en place un query analyzer qui bloque automatiquement les requêtes qui durent plus de 30 secondes. Deuxièmement, on ajoute des répliques en lecture seule pour le reporting. Troisièmement, on passe les alertes monitoring de 5 minutes à 1 minute.
+
+Karim : Validé pour les 3. Léa, tu me fais un planning d'implémentation pour lundi. Antoine, tu corriges la requête et tu mets en place des index manquants avant vendredi.
+
+Antoine : C'est noté. Je vais aussi auditer les 10 requêtes les plus lentes du mois pour vérifier qu'on n'a pas d'autres bombes à retardement.
+
+Karim : Excellente idée. Ajoute ça à ta liste. Par contre, on n'a pas encore décidé si on passe sur une solution de base de données managée type Amazon RDS. Léa, tu peux me faire un comparatif coût/bénéfice ?
+
+Léa : Oui, mais ça va prendre 2 semaines minimum pour avoir un chiffrage sérieux.
+
+Karim : OK, on en reparle dans 2 semaines alors. Dernière chose : est-ce qu'on doit prévenir nos investisseurs de cet incident ?
+
+Nadia : Je pense que non, ça a été résolu rapidement. Mais si ça se reproduit dans le mois, il faudra communiquer.
+
+Karim : D'accord, on ne communique pas aux investisseurs pour l'instant mais on surveille. Prochaine réunion de suivi dans 2 semaines. Merci à tous.

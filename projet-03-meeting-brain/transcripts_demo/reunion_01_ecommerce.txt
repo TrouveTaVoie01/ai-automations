@@ -1,0 +1,30 @@
+Réunion : Lancement du projet e-commerce
+Date : 12 mars 2024
+Durée : 45 minutes
+Participants : Sarah (Chef de projet), Marc (Développeur), Julie (Design), Thomas (Marketing)
+
+Sarah : Bonjour à tous, merci d'être là. On est réunis pour lancer officiellement le projet de refonte de notre site e-commerce. L'objectif est d'augmenter le taux de conversion de 2,1% à 3,5% d'ici septembre.
+
+Marc : J'ai fait un audit technique du site actuel. Le temps de chargement est de 4,2 secondes en moyenne. C'est beaucoup trop. Je recommande de passer sur Next.js avec un CDN Cloudflare.
+
+Sarah : OK, on valide la migration technique vers Next.js. Marc, tu peux me faire un planning détaillé pour vendredi ?
+
+Marc : Oui, je m'en occupe. Par contre, il faut qu'on tranche sur l'hébergement. On reste chez OVH ou on passe sur Vercel ?
+
+Julie : Côté design, j'ai préparé 3 maquettes pour la nouvelle page d'accueil. Je les présente la semaine prochaine. Je pense qu'on devrait faire des tests utilisateurs avant de valider.
+
+Sarah : Très bien. On planifie les tests utilisateurs pour fin mars. Julie, tu peux contacter notre panel de testeurs ?
+
+Thomas : Pour le marketing, je propose de préparer une campagne de lancement avec 3 phases : teasing, lancement, et rétention. Budget estimé : 15 000 euros.
+
+Sarah : Le budget marketing de 15 000 euros est validé. Thomas, prépare-moi le plan détaillé des 3 phases pour mercredi prochain.
+
+Marc : Il y a un point important : on n'a pas encore décidé si on intègre le paiement en 3 fois. Ça demande un développement supplémentaire de 2 semaines.
+
+Sarah : On ne tranche pas aujourd'hui sur le paiement en 3 fois. Marc, fais-moi une estimation du coût et du ROI attendu pour la prochaine réunion.
+
+Thomas : Et pour les réseaux sociaux, on crée un compte TikTok ou pas ?
+
+Sarah : On reporte la décision TikTok à la prochaine réunion aussi. Thomas, fais une analyse rapide des concurrents sur TikTok.
+
+Sarah : OK, pour résumer : Marc fait le planning technique pour vendredi, Julie prépare les tests utilisateurs pour fin mars, Thomas fait le plan marketing pour mercredi. Prochaine réunion mardi prochain à 14h. Merci à tous !

@@ -1,0 +1,46 @@
+Réunion : Plan de recrutement Q2 2024
+Date : 18 mars 2024
+Durée : 50 minutes
+Participants : Claire (DRH), Fabien (VP Engineering), Samia (Responsable commerciale), David (CFO)
+
+Claire : Bonjour, on est là pour valider le plan de recrutement du deuxième trimestre. On a actuellement 85 employés et le board a validé 12 recrutements pour Q2. Fabien, tu commences ?
+
+Fabien : J'ai besoin de 6 personnes côté tech : 2 développeurs seniors Python, 1 DevOps, 1 data engineer, 1 QA lead, et 1 product manager. Les 2 devs seniors sont critiques, on les a sur le backlog depuis janvier. On perd des deals parce qu'on ne peut pas livrer assez vite.
+
+David : Le budget total pour les 12 postes est de 780 000 euros annuels chargés. C'est validé par le board. Par contre, je demande qu'on priorise les postes qui ont un impact direct sur le revenu.
+
+Claire : D'accord. On classe les postes en 3 priorités. Fabien, les 2 devs seniors sont priorité 1, c'est clair. Et le reste ?
+
+Fabien : Le DevOps est priorité 1 aussi. On a eu l'incident serveur de la semaine dernière justement parce qu'on manque de bras. Le data engineer et le QA lead sont priorité 2. Le PM est priorité 3, on peut attendre juillet.
+
+Samia : Côté commercial, j'ai besoin de 4 personnes : 2 account executives, 1 SDR, et 1 customer success manager. Les 2 AE sont priorité 1, on a 30 leads qualifiés par mois mais on ne peut en traiter que 15. On laisse littéralement du revenu sur la table.
+
+David : C'est le genre d'argument que j'aime entendre. Les 2 AE sont validés priorité 1.
+
+Claire : Ça nous fait 5 postes priorité 1 : 2 devs seniors, 1 DevOps, 2 AE. On lance les recrutements cette semaine. Pour les canaux, je propose d'utiliser Welcome to the Jungle et LinkedIn. Pour les profils tech, on ajoute aussi des chasseurs de têtes. Fabien, tu as des contacts ?
+
+Fabien : Oui, j'ai travaillé avec le cabinet TechRecruit l'année dernière. Ils sont bons pour les profils seniors. Je leur envoie les fiches de poste cette semaine.
+
+Claire : Décision : on signe avec TechRecruit pour les profils tech seniors. Je négocie les honoraires demain. Pour les commerciaux, Samia, tu participes aux entretiens ?
+
+Samia : Oui, obligatoirement. Je veux faire passer un cas pratique à chaque candidat AE. Je prépare le cas pour vendredi.
+
+Claire : Il reste les 2 postes restants. David, tu avais mentionné un poste en finance ?
+
+David : Oui, un contrôleur de gestion. Mais honnêtement, ça peut attendre Q3 si le budget est serré. On a d'autres priorités.
+
+Claire : OK, on reporte le contrôleur de gestion à Q3. Et le dernier poste, c'est le office manager que la direction générale a demandé. On n'a pas encore validé la fiche de poste.
+
+Fabien : Est-ce qu'on a vraiment besoin d'un office manager avec 85 personnes dont 60% en remote ?
+
+Claire : Bonne question. On en discute à la prochaine réunion du comex. C'est reporté.
+
+David : Pour le suivi, je veux un dashboard de recrutement mis à jour chaque semaine : nombre de candidatures, entretiens, offres, et coût par recrutement.
+
+Claire : Je m'en occupe. Je mets en place un tracker Notion partagé avec tout le monde ici. Prochaine réunion de suivi dans 3 semaines. Des questions ?
+
+Samia : Juste un point : on offre du full remote sur les postes AE ou pas ?
+
+Claire : C'est un sujet à trancher. On en parle au comex aussi. Pour l'instant, on dit hybride 2 jours/semaine.
+
+Claire : Merci à tous. On a un plan clair. Go !
