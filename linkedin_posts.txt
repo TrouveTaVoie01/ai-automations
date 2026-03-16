@@ -1,0 +1,244 @@
+========================================
+POST 1 — Email Classifier (angle productivité)
+========================================
+
+Les entreprises perdent 2h par jour à trier leurs emails manuellement.
+
+J'ai construit un système qui classifie automatiquement les emails en 6 catégories (Support, Commercial, Facturation, RH, Spam, Urgent) et génère un brouillon de réponse pour chacun. Zéro intervention humaine.
+
+L'IA analyse le contenu, attribue un score de confiance, et remonte les urgences en priorité.
+
+Résultat : 50 emails classifiés en 45 secondes. Précision : 94%.
+
+Le projet est open source, testable immédiatement :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-01-email-classifier
+
+#IA #Automatisation #Productivité #Python #ClaudeAI #EmailAutomation
+
+========================================
+POST 2 — Email Classifier (angle technique)
+========================================
+
+Comment j'ai automatisé le tri d'emails avec Claude AI en 200 lignes de Python.
+
+Le problème : un service client reçoit 500 emails/jour. Les trier prend 3 employés à temps plein.
+
+Ma solution : une app Streamlit connectée à Claude API. L'utilisateur uploade un CSV d'emails. Le système classifie tout en batch, affiche un dashboard avec la répartition, et exporte les résultats.
+
+Stack : Python + Streamlit + Claude API + Plotly + N8N.
+
+50 emails traités en 45 secondes. Un workflow N8N fait la même chose en automatique 24/7.
+
+Code source complet ici :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-01-email-classifier
+
+#Python #IA #Streamlit #Anthropic #Automation #DevIA
+
+========================================
+POST 3 — Email Classifier (angle business)
+========================================
+
+Un service client qui traite 500 emails par jour dépense environ 4 500 EUR/mois en tri manuel.
+
+Mon système fait le même travail pour le coût de quelques appels API. Soit environ 50 EUR/mois.
+
+Il classifie chaque email, détecte les urgences, et propose un brouillon de réponse. Le tout en moins d'une seconde par email.
+
+L'automatisation IA, ce n'est pas remplacer les humains. C'est leur libérer du temps pour les tâches à haute valeur ajoutée.
+
+Testez par vous-même :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-01-email-classifier
+
+#ROI #AutomatisationIA #TransformationDigitale #ClaudeAI #Business
+
+========================================
+POST 4 — Document Extractor (angle gain de temps)
+========================================
+
+Extraire les données d'une facture à la main prend 3 minutes. Faire la même chose pour 100 factures, c'est une demi-journée.
+
+J'ai construit un système qui détecte automatiquement le type de document (facture, CV, contrat) et extrait toutes les données clés en tableau structuré.
+
+Fournisseur, montant HT, TVA, TTC pour les factures. Nom, compétences, expériences pour les CV. Parties, objet, durée pour les contrats.
+
+15 documents analysés en 20 secondes. Précision de détection : 97%.
+
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-02-document-extractor
+
+#DocumentAI #Automatisation #IA #Factures #DataExtraction #Python
+
+========================================
+POST 5 — Document Extractor (angle RH)
+========================================
+
+Les recruteurs passent 6 secondes sur un CV avant de décider.
+
+Mon système lit le CV en entier et extrait : nom, email, compétences, expériences, formation. En moins de 2 secondes. Pour chaque CV. Automatiquement.
+
+Upload 50 CV d'un coup. Résultat : un tableau structuré avec toutes les infos, filtrable et exportable en CSV.
+
+Plus besoin de saisir manuellement. Plus de données oubliées. Plus de biais de lecture rapide.
+
+Projet open source, testable maintenant :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-02-document-extractor
+
+#Recrutement #RH #IA #AutomatisationRH #TechRH #CVParsing
+
+========================================
+POST 6 — Document Extractor (angle conformité)
+========================================
+
+Vérifier 200 factures par mois pour la conformité comptable. Manuellement. En 2025.
+
+J'ai automatisé ça. Le système détecte que c'est une facture, extrait le fournisseur, le numéro, la date, le montant HT, la TVA, le TTC. Tout dans un tableau propre.
+
+Ajoutez un workflow N8N : chaque nouveau fichier dans un dossier est traité automatiquement et logué dans un Google Sheet.
+
+97% de précision. 20 secondes pour 15 documents.
+
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-02-document-extractor
+
+#Comptabilité #Facturation #IA #Automatisation #Conformité #N8N
+
+========================================
+POST 7 — Meeting Brain (angle réunions)
+========================================
+
+80% des décisions prises en réunion sont oubliées dans les 48h.
+
+J'ai construit un outil qui analyse le transcript d'une réunion et génère automatiquement : un résumé exécutif, la liste des décisions, un plan d'action avec responsables et deadlines, et les points en suspens.
+
+Export PDF en un clic. Suivi des tâches intégré.
+
+Un transcript de 45 minutes analysé en 3 secondes. 100% des actions et décisions détectées.
+
+Fini les comptes-rendus manuels :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-03-meeting-brain
+
+#Réunions #Productivité #IA #MeetingNotes #ActionItems #Automatisation
+
+========================================
+POST 8 — Meeting Brain (angle management)
+========================================
+
+Combien de plans d'action restent dans un Google Doc que personne ne relit ?
+
+Mon système transforme chaque réunion en actions concrètes. Pas un résumé vague. Des actions avec un responsable, une deadline, et une priorité.
+
+L'outil détecte aussi les points non tranchés pour qu'ils ne tombent pas dans l'oubli.
+
+Résultat : les décisions se transforment en exécution. Les réunions servent enfin à quelque chose.
+
+Testez avec le transcript d'exemple intégré :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-03-meeting-brain
+
+#Management #Leadership #IA #Productivité #PlanAction #Exécution
+
+========================================
+POST 9 — Meeting Brain (angle technique)
+========================================
+
+Stack pour automatiser l'analyse de réunions en 2025 :
+
+Python + Streamlit pour l'interface.
+Claude API pour l'analyse du transcript.
+fpdf2 pour l'export PDF.
+N8N pour le workflow automatique.
+
+Le prompt demande à Claude un JSON structuré : résumé, décisions, actions (avec responsable + deadline + priorité), points en suspens.
+
+Le tout tient dans un seul fichier Python de 300 lignes. Déployable en 5 minutes.
+
+Code source complet :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-03-meeting-brain
+
+#Python #ClaudeAI #Streamlit #N8N #PromptEngineering #DevIA
+
+========================================
+POST 10 — Lead Qualifier (angle commercial)
+========================================
+
+Les commerciaux passent 40% de leur temps à qualifier des leads. La plupart sont froids.
+
+Mon système analyse chaque lead en 1 seconde : score de 1 à 10, catégorisation Hot/Warm/Cold, signaux positifs et négatifs, et une réponse personnalisée prête à envoyer.
+
+Les leads Hot remontent en priorité. Les Cold sont filtrés. Le commercial ne perd plus de temps.
+
+50 leads qualifiés en 50 secondes avec réponse personnalisée pour chacun.
+
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-04-lead-qualifier
+
+#Vente #LeadScoring #IA #Commercial #SalesAutomation #B2B
+
+========================================
+POST 11 — Lead Qualifier (angle ROI)
+========================================
+
+Un commercial traite en moyenne 15 leads qualifiés par jour. Manuellement.
+
+Avec l'IA : 50 leads qualifiés en 50 secondes. Score de priorité, catégorisation automatique, réponse personnalisée générée.
+
+Imaginez : votre équipe de 5 commerciaux reçoit chaque matin un tableau trié par priorité. Les leads Hot sont contactés dans l'heure. Les Warm sont nourris automatiquement.
+
+Le temps de réponse passe de 24h à 2h. Le taux de conversion suit.
+
+Projet open source :
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-04-lead-qualifier
+
+#ROI #Sales #IA #LeadGeneration #Automatisation #Conversion
+
+========================================
+POST 12 — Lead Qualifier (angle startup)
+========================================
+
+Quand t'es une startup early-stage, chaque lead compte. Tu ne peux pas te permettre de rater un lead Hot.
+
+J'ai construit un système qui analyse le message du lead, estime la taille de l'entreprise, détecte le budget et l'urgence, et génère une réponse adaptée.
+
+Un lead Hot qui mentionne un budget et une deadline ? Alerte immédiate.
+Un curieux sans budget ? Classé Cold, réponse automatique.
+
+Tout est triable, exportable, automatisable via N8N.
+
+https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-04-lead-qualifier
+
+#Startup #Sales #IA #Growth #LeadQualification #Automatisation
+
+========================================
+POST 13 — Général (portfolio complet)
+========================================
+
+En 10 jours, j'ai construit 4 systèmes d'automatisation IA complets :
+
+1. Email Classifier — 50 emails classifiés en 45s (94% de précision)
+2. Document Extractor — Factures, CV, contrats analysés en 20s
+3. Meeting Brain — Transcript de réunion → plan d'action en 3s
+4. Lead Qualifier — 50 leads scorés et triés en 50s
+
+Chaque projet inclut : une interface Streamlit, un workflow N8N, des données de démo, et un README avec résultats chiffrés.
+
+Tout est open source et testable :
+https://github.com/TrouveTaVoie01/ai-automations
+
+L'automatisation IA n'est pas le futur. C'est maintenant.
+
+#IA #Portfolio #Automatisation #Python #ClaudeAI #OpenSource
+
+========================================
+POST 14 — Général (disponibilité)
+========================================
+
+Je cherche un CDI en full remote en tant qu'AI Automation Specialist.
+
+Ce que je fais : je conçois des systèmes qui automatisent les tâches répétitives grâce à l'IA. Emails, documents, réunions, leads — tout ce qui peut être traité par une machine devrait l'être.
+
+Ma stack : Python, Claude API, Streamlit, N8N, Pandas.
+
+Mon portfolio : 4 projets complets, testables, documentés, avec résultats chiffrés.
+https://github.com/TrouveTaVoie01/ai-automations
+
+Si votre entreprise perd du temps sur des process manuels, je peux probablement automatiser ça.
+
+Contact : lenny.delcorso2@gmail.com
+
+#Recrutement #CDI #FullRemote #IA #Automatisation #OpenToWork

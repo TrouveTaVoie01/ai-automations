@@ -23,7 +23,7 @@ Une application qui analyse automatiquement le transcript d'une réunion via Cla
 
 ## Démo
 
-[SCREENSHOT]
+![Screenshot de l'application](screenshot_app.png)
 
 ### Lancer l'application
 ```bash

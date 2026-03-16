@@ -22,7 +22,7 @@ Une application qui analyse automatiquement chaque lead via Claude AI, attribue 
 
 ## Démo
 
-[SCREENSHOT]
+![Screenshot de l'application](screenshot_app.png)
 
 ### Lancer l'application
 ```bash

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Lenny Del Corso | AI Automation Specialist</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 50px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #1a1a2e;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .header .title {
+            font-size: 16px;
+            color: #4a6cf7;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .header .contact {
+            font-size: 13px;
+            color: #555;
+        }
+        .header .contact a {
+            color: #4a6cf7;
+            text-decoration: none;
+        }
+        .header .contact span {
+            margin: 0 8px;
+            color: #ccc;
+        }
+        .summary {
+            background: #f0f4ff;
+            border-left: 4px solid #4a6cf7;
+            padding: 14px 18px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            color: #333;
+        }
+        h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a2e;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+            margin-top: 28px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .skill-tag {
+            background: #f0f4ff;
+            color: #4a6cf7;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #d0d8ff;
+        }
+        .project {
+            margin-bottom: 20px;
+            padding-left: 16px;
+            border-left: 3px solid #e0e0e0;
+        }
+        .project:hover {
+            border-left-color: #4a6cf7;
+        }
+        .project h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .project .meta {
+            font-size: 12px;
+            color: #4a6cf7;
+            margin-bottom: 4px;
+        }
+        .project p {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 4px;
+        }
+        .project .results {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        .project a {
+            color: #4a6cf7;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        @media print {
+            body { padding: 20px 30px; }
+            .project:hover { border-left-color: #e0e0e0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>LENNY DEL CORSO</h1>
+    <div class="title">AI Automation Specialist</div>
+    <div class="contact">
+        <a href="mailto:lenny.delcorso2@gmail.com">lenny.delcorso2@gmail.com</a>
+        <span>|</span> France — Full remote
+        <span>|</span> <a href="https://github.com/TrouveTaVoie01/ai-automations">github.com/TrouveTaVoie01/ai-automations</a>
+    </div>
+</div>
+
+<div class="summary">
+    Je conçois et déploie des systèmes d'automatisation IA qui traitent emails, documents, réunions et leads commerciaux — sans intervention humaine.
+</div>
+
+<h2>Compétences techniques</h2>
+<div class="skills">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">Claude API (Anthropic)</span>
+    <span class="skill-tag">Streamlit</span>
+    <span class="skill-tag">N8N</span>
+    <span class="skill-tag">Pandas</span>
+    <span class="skill-tag">Plotly</span>
+    <span class="skill-tag">API REST</span>
+    <span class="skill-tag">Prompt Engineering</span>
+    <span class="skill-tag">Automatisation de workflows</span>
+    <span class="skill-tag">Git / GitHub</span>
+    <span class="skill-tag">CSV / JSON</span>
+    <span class="skill-tag">Selenium</span>
+</div>
+
+<h2>Projets d'automatisation IA</h2>
+
+<div class="two-col">
+    <div class="project">
+        <h3>Email Classifier AI</h3>
+        <div class="meta">Classification automatique d'emails</div>
+        <p>Classifie les emails en 6 catégories (Support, Commercial, Facturation, RH, Spam, Urgent) avec brouillon de réponse automatique.</p>
+        <p class="results">50 emails en 45s — Précision 94%</p>
+        <a href="https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-01-email-classifier">Voir le projet →</a>
+    </div>
+
+    <div class="project">
+        <h3>Document Extractor AI</h3>
+        <div class="meta">Extraction de données depuis documents</div>
+        <p>Détecte le type de document (facture, CV, contrat) et extrait les données clés dans un tableau structuré.</p>
+        <p class="results">15 documents en 20s — Précision 97%</p>
+        <a href="https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-02-document-extractor">Voir le projet →</a>
+    </div>
+
+    <div class="project">
+        <h3>Meeting Brain AI</h3>
+        <div class="meta">Analyse de transcripts de réunion</div>
+        <p>Génère un compte-rendu structuré : résumé exécutif, décisions, plan d'action avec responsables et deadlines. Export PDF.</p>
+        <p class="results">Transcript de 45 min analysé en 3s</p>
+        <a href="https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-03-meeting-brain">Voir le projet →</a>
+    </div>
+
+    <div class="project">
+        <h3>Lead Qualifier AI</h3>
+        <div class="meta">Qualification de leads commerciaux</div>
+        <p>Score de 1 à 10, catégorisation Hot/Warm/Cold, signaux positifs et négatifs, réponse personnalisée pour chaque lead.</p>
+        <p class="results">50 leads qualifiés en 50s — Tri par priorité</p>
+        <a href="https://github.com/TrouveTaVoie01/ai-automations/tree/master/projet-04-lead-qualifier">Voir le projet →</a>
+    </div>
+</div>
+
+<h2>Approche</h2>
+<div style="font-size: 13px; color: #444;">
+    <p>Chaque projet suit la même architecture : <strong>interface Streamlit</strong> pour l'utilisateur + <strong>workflow N8N</strong> pour l'automatisation + <strong>Claude API</strong> pour l'intelligence. Tous les projets incluent un mode batch, un dashboard interactif, des données de démo et sont testables immédiatement.</p>
+</div>
+
+<div class="footer">
+    Disponible immédiatement en CDI full remote — lenny.delcorso2@gmail.com
+</div>
+
+</body>
+</html>

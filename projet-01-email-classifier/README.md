@@ -20,7 +20,7 @@ Une application qui classifie automatiquement chaque email en 6 catégories (Sup
 
 ## Démo
 
-[SCREENSHOT]
+![Screenshot de l'application](screenshot_app.png)
 
 ### Lancer l'application
 ```bash

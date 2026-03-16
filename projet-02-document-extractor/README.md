@@ -22,7 +22,7 @@ Une application qui détecte automatiquement le type de document et extrait les 
 
 ## Démo
 
-[SCREENSHOT]
+![Screenshot de l'application](screenshot_app.png)
 
 ### Lancer l'application
 ```bash

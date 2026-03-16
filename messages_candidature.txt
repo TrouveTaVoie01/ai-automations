@@ -1,0 +1,88 @@
+========================================
+MESSAGE 1 — LinkedIn DM (approche directe)
+========================================
+
+Bonjour [Prénom],
+
+Je construis des systèmes d'automatisation IA : classification d'emails, extraction de documents, analyse de réunions, qualification de leads. Tout en Python + Claude API + N8N.
+
+Mon dernier projet classifie 50 emails en 45 secondes avec 94% de précision.
+
+Je cherche un CDI full remote. Est-ce que [Entreprise] a des besoins en automatisation IA ?
+
+Portfolio complet : https://github.com/TrouveTaVoie01/ai-automations
+
+========================================
+MESSAGE 2 — Email froid (prospection)
+========================================
+
+Objet : Automatisation IA — 50 emails classifiés en 45 secondes
+
+Bonjour,
+
+Je suis spécialisé en automatisation de process par IA. J'ai construit 4 systèmes complets : classification d'emails, extraction de documents, analyse de réunions et qualification de leads.
+
+Résultats concrets : 94% de précision en classification, 15 documents extraits en 20s, 50 leads qualifiés en 50s.
+
+Disponible immédiatement en CDI full remote.
+
+Portfolio : https://github.com/TrouveTaVoie01/ai-automations
+
+Cordialement,
+Lenny Del Corso
+lenny.delcorso2@gmail.com
+
+========================================
+MESSAGE 3 — Réponse à une offre d'emploi
+========================================
+
+Bonjour,
+
+Votre offre de [Titre du poste] correspond exactement à ce que je fais au quotidien.
+
+J'ai construit 4 projets d'automatisation IA (email, documents, réunions, leads) avec Python, Claude API, Streamlit et N8N. Chaque projet est fonctionnel, documenté et testable.
+
+Résultat phare : 50 emails classifiés en 45 secondes, 94% de précision.
+
+Disponible immédiatement en CDI full remote.
+
+Portfolio : https://github.com/TrouveTaVoie01/ai-automations
+
+Cordialement,
+Lenny Del Corso
+
+========================================
+MESSAGE 4 — Message à un recruteur
+========================================
+
+Bonjour [Prénom],
+
+Je me permets de vous contacter car je cherche un CDI full remote en automatisation IA.
+
+Mon profil : AI Automation Specialist. Je conçois des systèmes qui traitent emails, documents et leads automatiquement via Python + Claude API + N8N.
+
+4 projets complets et testables dans mon portfolio. Résultats mesurés et documentés.
+
+Si vous avez des missions en IA, automatisation ou intégration, je suis disponible immédiatement.
+
+Portfolio : https://github.com/TrouveTaVoie01/ai-automations
+
+Merci,
+Lenny Del Corso
+
+========================================
+MESSAGE 5 — Relance (après 7 jours sans réponse)
+========================================
+
+Bonjour [Prénom],
+
+Je me permets de revenir vers vous suite à mon message de la semaine dernière concernant le poste de [Titre].
+
+Depuis, j'ai ajouté un nouveau projet à mon portfolio : un système de qualification automatique de leads qui score et trie 50 leads en 50 secondes.
+
+Je reste très motivé par cette opportunité. Seriez-vous disponible pour un échange de 15 minutes cette semaine ?
+
+Portfolio mis à jour : https://github.com/TrouveTaVoie01/ai-automations
+
+Cordialement,
+Lenny Del Corso
