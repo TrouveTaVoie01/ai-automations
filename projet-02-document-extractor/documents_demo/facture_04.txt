@@ -1,0 +1,20 @@
+FACTURE N° F-2024-0023
+Date : 10/02/2024
+
+FOURNISSEUR : DataSécurité SARL
+Adresse : 78 avenue de la République, 92100 Boulogne
+
+CLIENT : Cabinet Juridique Martin & Associés
+Adresse : 156 rue du Palais, 13006 Marseille
+
+Réf.   Désignation                          HT
+001    Audit sécurité informatique           2 800,00
+002    Installation pare-feu nouvelle gén.   1 500,00
+003    Formation cybersécurité (10 pers.)    1 200,00
+004    Licence antivirus entreprise (1 an)     450,00
+
+Total Hors Taxes :  5 950,00 EUR
+TVA 20% :          1 190,00 EUR
+Total TTC :        7 140,00 EUR
+
+Mode de paiement : Virement - 30 jours fin de mois

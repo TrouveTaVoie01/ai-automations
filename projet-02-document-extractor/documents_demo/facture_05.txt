@@ -1,0 +1,24 @@
+FACTURE PROFORMA
+N° : PF-2024-0156
+Date : 20/03/2024
+
+Société émettrice :
+MobilityTech SAS - 90 rue de Rivoli, 75001 Paris
+
+Client :
+Mairie de Nantes - 2 rue de l'Hôtel de Ville, 44000 Nantes
+
+Objet : Déploiement solution mobilité urbaine
+
+Détail des prestations :
+1. Étude de faisabilité et audit terrain           4 500,00 EUR HT
+2. Développement application mobile (iOS + Android) 25 000,00 EUR HT
+3. Installation 50 bornes connectées               15 000,00 EUR HT
+4. Maintenance et support (24 mois)                 8 000,00 EUR HT
+
+Total HT :  52 500,00 EUR
+TVA 20% :   10 500,00 EUR
+Total TTC : 63 000,00 EUR
+
+Validité de l'offre : 30 jours.
+Paiement : 30% à la commande, 40% à la livraison, 30% à la recette.

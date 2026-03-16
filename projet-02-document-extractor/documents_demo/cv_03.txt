@@ -1,0 +1,34 @@
+CURRICULUM VITAE
+
+Prénom Nom : Amina HASSAN
+Date de naissance : 15/06/1995
+Email : amina.hassan@gmail.com
+Tél : 06 45 67 89 01
+Ville : Marseille
+
+OBJECTIF
+Intégrer une entreprise innovante en tant que Chef de Projet Digital
+pour piloter des projets de transformation numérique.
+
+PARCOURS PROFESSIONNEL
+
+2023-Présent : Chef de Projet Digital - Decathlon, Marseille
+- Pilotage du projet e-commerce international (budget 1,2M EUR)
+- Coordination de 3 équipes (dev, design, marketing) - 15 personnes
+- Lancement réussi dans 4 pays en 8 mois
+
+2020-2023 : Product Owner - Ubisoft, Montpellier
+- Gestion du backlog et priorisation des features pour un jeu mobile
+- Augmentation de la rétention joueur de 25% en 6 mois
+- Méthode agile Scrum, sprints de 2 semaines
+
+2019-2020 : Stage puis CDI - Junior PM chez Thales, Sophia Antipolis
+- Suivi de projet pour application de défense
+
+DIPLÔMES
+2019 : Master Management de Projet Digital - Kedge Business School
+2017 : Licence Gestion - Université Aix-Marseille
+
+COMPÉTENCES
+Jira, Confluence, Figma, Notion, Google Analytics, SQL, Agile/Scrum,
+Lean, Design Thinking, Anglais courant

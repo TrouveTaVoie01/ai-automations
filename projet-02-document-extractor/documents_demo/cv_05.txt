@@ -1,0 +1,35 @@
+CURRICULUM VITAE
+
+Julie LAMBERT
+Développeuse IA / Machine Learning
+
+Contact : julie.lambert.ai@gmail.com
+Tél : 07 66 55 44 33
+GitHub : github.com/julielambert
+Localisation : Toulouse (full remote possible)
+
+FORMATION
+2021 : PhD Intelligence Artificielle - IRIT Toulouse
+       Thèse : "Apprentissage par renforcement pour la robotique collaborative"
+2017 : Master Informatique spé. IA - INP Toulouse
+
+EXPÉRIENCE PROFESSIONNELLE
+2021-Présent : ML Engineer Senior - Airbus, Toulouse
+- Développement de modèles de vision par ordinateur pour l'inspection aéro
+- Déploiement de modèles en edge computing (NVIDIA Jetson)
+- Publication de 3 papiers de recherche (NeurIPS, ICML)
+
+2017-2021 : Doctorante / ATER - IRIT Toulouse
+- Recherche en RL multi-agents
+- Enseignement (Python, Algo, ML) à l'INP
+
+COMPÉTENCES
+Python, PyTorch, TensorFlow, JAX, OpenCV, C++, CUDA, Docker, MLflow,
+Weights & Biases, Linux, Git, LaTeX
+
+PUBLICATIONS
+- Lambert et al. (2021) "Multi-Agent RL for Collaborative Robotics" - NeurIPS
+- Lambert et al. (2020) "Sim-to-Real Transfer in Manufacturing" - ICML
+
+LANGUES
+Français (natif), Anglais (C2), Allemand (B1)

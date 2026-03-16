@@ -1,0 +1,36 @@
+CONTRAT DE PRESTATION DE SERVICES
+
+Entre les soussignés :
+
+La société DigitalAgency SAS, au capital de 50 000 EUR,
+dont le siège social est situé 15 rue de la Tech, 75003 Paris,
+immatriculée au RCS de Paris sous le numéro 987 654 321,
+représentée par M. Alexandre PETIT, en qualité de Directeur Général,
+ci-après dénommée "le Prestataire",
+
+ET
+
+La société BioPharm SA, au capital de 500 000 EUR,
+dont le siège social est situé 200 avenue de la Santé, 92400 Courbevoie,
+représentée par Mme Claire MOREAU, en qualité de Directrice Marketing,
+ci-après dénommée "le Client",
+
+IL A ÉTÉ CONVENU CE QUI SUIT :
+
+Article 1 - Objet
+Le Prestataire s'engage à réaliser pour le Client la refonte complète
+du site web corporate et la mise en place d'une stratégie SEO.
+
+Article 2 - Durée
+Le présent contrat est conclu pour une durée de 6 mois à compter
+de sa date de signature, soit du 01/03/2024 au 31/08/2024.
+
+Article 3 - Prix
+Le montant total de la prestation s'élève à 35 000 EUR HT.
+Paiement en 3 échéances : 40% à la signature, 30% à mi-parcours, 30% à la livraison.
+
+Article 4 - Confidentialité
+Les parties s'engagent à maintenir confidentielles toutes les
+informations échangées dans le cadre du présent contrat.
+
+Fait à Paris, le 25/02/2024, en deux exemplaires originaux.

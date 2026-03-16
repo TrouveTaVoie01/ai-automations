@@ -1,0 +1,31 @@
+CV - THOMAS BERNARD
+
+Contact : thomas.bernard@protonmail.com | 07 98 76 54 32
+Localisation : Lyon | Mobilité : France entière
+
+PROFIL
+Développeur Full-Stack avec 7 ans d'expérience, spécialisé en
+applications SaaS B2B. Passionné par les architectures microservices
+et le DevOps.
+
+EXPÉRIENCES
+2022-Présent : Lead Développeur - Doctolib, Lyon
+- Management d'une équipe de 6 développeurs
+- Migration architecture monolithique vers microservices (Kubernetes)
+- Réduction du temps de déploiement de 4h à 15 minutes
+
+2019-2022 : Développeur Senior - OVHcloud, Roubaix
+- Développement API REST haute performance (Go, gRPC)
+- Mise en place CI/CD avec GitLab et ArgoCD
+- Optimisation des requêtes : temps de réponse divisé par 5
+
+2017-2019 : Développeur Junior - Capgemini, Paris
+- Développement d'applications web React/Node.js
+- Intégration de systèmes de paiement (Stripe, PayPal)
+
+FORMATION
+2017 : Diplôme d'Ingénieur - INSA Lyon, spécialité Informatique
+
+COMPÉTENCES TECHNIQUES
+JavaScript, TypeScript, React, Node.js, Go, Python, PostgreSQL,
+MongoDB, Docker, Kubernetes, AWS, GCP, Terraform, GitLab CI

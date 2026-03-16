@@ -1,0 +1,25 @@
+FACTURE N° FAC-2024-0891
+Date : 15/02/2024
+
+FOURNISSEUR :
+TechSolutions SAS
+45 rue de l'Innovation
+69003 Lyon
+SIRET : 123 456 789 00012
+
+CLIENT :
+Entreprise Dupont SARL
+12 avenue des Champs
+75008 Paris
+
+DESIGNATION                          QTE    PU HT     TOTAL HT
+Licence logiciel CRM Pro (annuel)      1    2 400,00   2 400,00
+Formation utilisateurs (2 jours)       1      800,00     800,00
+Support premium (12 mois)              1      600,00     600,00
+
+                                    TOTAL HT :   3 800,00 EUR
+                                    TVA 20% :      760,00 EUR
+                                    TOTAL TTC :  4 560,00 EUR
+
+Conditions de paiement : 30 jours date de facture
+IBAN : FR76 1234 5678 9012 3456 7890 123

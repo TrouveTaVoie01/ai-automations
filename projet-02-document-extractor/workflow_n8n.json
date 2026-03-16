@@ -1,0 +1,107 @@
+{
+  "name": "Document Extractor - Extraction automatique",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "/watched-folder",
+        "pollTimes": {
+          "item": [{ "mode": "everyMinute" }]
+        },
+        "triggerOn": "specificFolder",
+        "folderToWatch": "={{ $env.WATCH_FOLDER_PATH }}",
+        "events": ["add"]
+      },
+      "id": "watch-folder",
+      "name": "Watch Folder - Nouveaux fichiers",
+      "type": "n8n-nodes-base.localFileTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "filePath": "={{ $json.path }}",
+        "options": {}
+      },
+      "id": "read-file",
+      "name": "Lire le fichier",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "content-type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-20250514\",\n  \"max_tokens\": 800,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyse ce document et retourne un JSON avec type (Facture/CV/Contrat), confiance (0-1) et donnees (champs extraits). Document: {{ $json.data }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "claude-extract",
+      "name": "Claude - Extraction",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst textContent = response.content[0].text;\nconst extraction = JSON.parse(textContent);\nextraction.fichier = $('Watch Folder - Nouveaux fichiers').first().json.path;\nextraction.timestamp = new Date().toISOString();\nreturn [{ json: extraction }];"
+      },
+      "id": "parse-response",
+      "name": "Parser la réponse",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "documentId": { "__rl": true, "value": "={{ $env.GOOGLE_SHEET_ID }}", "mode": "id" },
+        "sheetName": { "__rl": true, "value": "Documents", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "fichier": "={{ $json.fichier }}",
+            "type": "={{ $json.type }}",
+            "confiance": "={{ $json.confiance }}",
+            "donnees": "={{ JSON.stringify($json.donnees) }}"
+          }
+        }
+      },
+      "id": "gsheet-log",
+      "name": "Log Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $env.ALERT_EMAIL }}",
+        "subject": "=Nouveau document traité : {{ $json.type }} ({{ $json.confiance * 100 }}%)",
+        "emailType": "text",
+        "message": "=Un nouveau document a été extrait automatiquement.\n\nFichier : {{ $json.fichier }}\nType : {{ $json.type }}\nConfiance : {{ $json.confiance }}\n\nDonnées extraites :\n{{ JSON.stringify($json.donnees, null, 2) }}\n\nTraité le : {{ $json.timestamp }}"
+      },
+      "id": "email-notif",
+      "name": "Notification email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1500, 300]
+    }
+  ],
+  "connections": {
+    "Watch Folder - Nouveaux fichiers": { "main": [[{ "node": "Lire le fichier", "type": "main", "index": 0 }]] },
+    "Lire le fichier": { "main": [[{ "node": "Claude - Extraction", "type": "main", "index": 0 }]] },
+    "Claude - Extraction": { "main": [[{ "node": "Parser la réponse", "type": "main", "index": 0 }]] },
+    "Parser la réponse": { "main": [[{ "node": "Log Google Sheet", "type": "main", "index": 0 }]] },
+    "Log Google Sheet": { "main": [[{ "node": "Notification email", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "document-extractor", "id": "3" }, { "name": "ai-automation", "id": "2" }]
+}

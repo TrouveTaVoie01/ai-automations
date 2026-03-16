@@ -1,0 +1,21 @@
+FACTURE N° 2024-03-127
+Date d'émission : 03/03/2024
+
+Émetteur : CloudHost Pro
+15 boulevard Haussmann, 75009 Paris
+TVA Intracommunautaire : FR 12 345678901
+
+Destinataire : Startup InnoVenture
+8 rue du Faubourg, 33000 Bordeaux
+
+Description                              Montant HT
+Hébergement serveur dédié (mars 2024)      450,00 EUR
+Certificat SSL wildcard                     120,00 EUR
+Sauvegarde automatique quotidienne           80,00 EUR
+Bande passante supplémentaire (500 Go)       50,00 EUR
+
+Sous-total HT :    700,00 EUR
+TVA (20%) :        140,00 EUR
+Total TTC :        840,00 EUR
+
+Paiement par prélèvement automatique le 10/03/2024.

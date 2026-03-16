@@ -1,0 +1,35 @@
+CONTRAT DE LICENCE LOGICIELLE
+
+ENTRE :
+L'Éditeur : SoftwareForge SARL
+Siège social : 5 impasse du Code, 31000 Toulouse
+RCS Toulouse : 789 012 345
+
+ET :
+Le Licencié : Hôpital Saint-Antoine
+Adresse : 184 rue du Faubourg Saint-Antoine, 75012 Paris
+Représenté par : Dr. Philippe GARNIER, Directeur des Systèmes d'Information
+
+ARTICLE 1 - OBJET
+L'Éditeur concède au Licencié une licence d'utilisation non exclusive
+du logiciel "MedFlow Pro" - solution de gestion des dossiers patients.
+
+ARTICLE 2 - DURÉE
+Licence perpétuelle avec maintenance obligatoire.
+Contrat de maintenance : 3 ans, du 01/01/2024 au 31/12/2026.
+
+ARTICLE 3 - CONDITIONS FINANCIÈRES
+Licence perpétuelle (200 postes) : 180 000 EUR HT
+Maintenance annuelle : 36 000 EUR HT/an
+Formation initiale (5 jours) : 8 000 EUR HT
+Total première année : 224 000 EUR HT
+
+ARTICLE 4 - GARANTIE
+L'Éditeur garantit le bon fonctionnement du logiciel pendant 12 mois.
+Temps de réponse garanti : 4h pour les incidents critiques.
+
+ARTICLE 5 - DONNÉES PERSONNELLES
+Le traitement des données de santé est conforme au RGPD et à la
+réglementation HDS (Hébergement de Données de Santé).
+
+Fait à Toulouse, le 20/12/2023.

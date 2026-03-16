@@ -1,0 +1,28 @@
+CURRICULUM VITAE
+
+Sophie MARTIN
+Email : sophie.martin@email.com
+Téléphone : 06 12 34 56 78
+Adresse : 25 rue des Lilas, 75011 Paris
+LinkedIn : linkedin.com/in/sophie-martin
+
+FORMATION
+2018 - Master Data Science, École Polytechnique
+2016 - Licence Mathématiques Appliquées, Université Paris-Saclay
+
+EXPÉRIENCE PROFESSIONNELLE
+2021-Présent : Data Scientist Senior - BNP Paribas, Paris
+- Développement de modèles de scoring crédit (XGBoost, Random Forest)
+- Mise en production de pipelines ML sur AWS SageMaker
+- Réduction de 30% des faux positifs sur la détection de fraude
+
+2018-2021 : Data Analyst - Criteo, Paris
+- Analyse comportementale des utilisateurs (SQL, Python, Tableau)
+- A/B testing et optimisation des campagnes publicitaires
+- Création de dashboards automatisés pour le comité de direction
+
+COMPÉTENCES
+Python, R, SQL, TensorFlow, PyTorch, AWS, Docker, Spark, Tableau, Power BI
+
+LANGUES
+Français (natif), Anglais (C1), Espagnol (B2)

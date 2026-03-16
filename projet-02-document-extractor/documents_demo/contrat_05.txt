@@ -1,0 +1,41 @@
+CONTRAT DE SOUS-TRAITANCE INFORMATIQUE
+
+ENTRE :
+Le Donneur d'ordre : Banque Nationale de Développement SA
+Siège : 1 place de la Bourse, 75002 Paris
+Représentée par : M. Henri FONTAINE, DSI
+
+ET :
+Le Sous-traitant : CyberShield Technologies SAS
+Siège : 25 rue de la Défense, 92800 Puteaux
+Représentée par : Mme Sarah LEVY, Directrice Générale
+
+Article 1 - Objet
+Le Sous-traitant s'engage à assurer la surveillance et la protection
+du système d'information du Donneur d'ordre (SOC managé 24/7).
+
+Article 2 - Durée
+Contrat de 3 ans, du 01/01/2024 au 31/12/2026.
+Résiliation possible avec préavis de 6 mois.
+
+Article 3 - Périmètre
+- Supervision 24/7 du SI (2 500 endpoints, 150 serveurs)
+- Réponse aux incidents de sécurité (CERT)
+- Tests d'intrusion trimestriels
+- Rapports mensuels de sécurité
+
+Article 4 - Prix
+Forfait mensuel : 45 000 EUR HT/mois
+Tests d'intrusion : 12 000 EUR HT/trimestre
+Total annuel : 588 000 EUR HT
+
+Article 5 - SLA
+Disponibilité du SOC : 99,9%
+Temps de détection d'un incident critique : < 15 minutes
+Temps de réponse initial : < 30 minutes
+
+Article 6 - Conformité
+Le Sous-traitant s'engage à respecter les normes ISO 27001,
+PCI-DSS et les exigences de l'ACPR/Banque de France.
+
+Fait à Paris, le 15/12/2023.
