@@ -185,11 +185,35 @@ with tab1:
 
     upload_mode = st.radio("Mode d'entrée :", ["Coller le texte", "Uploader un fichier .txt"], horizontal=True)
 
+    EXEMPLE_FACTURE = """FACTURE N° FAC-2024-0891
+Date : 15/02/2024
+
+FOURNISSEUR : TechSolutions SAS
+45 rue de l'Innovation, 69003 Lyon
+
+CLIENT : Entreprise Dupont SARL
+12 avenue des Champs, 75008 Paris
+
+Licence logiciel CRM Pro (annuel)    2 400,00 EUR HT
+Formation utilisateurs (2 jours)       800,00 EUR HT
+Support premium (12 mois)              600,00 EUR HT
+
+TOTAL HT :  3 800,00 EUR
+TVA 20% :     760,00 EUR
+TOTAL TTC : 4 560,00 EUR"""
+
+    col_input, col_example = st.columns([4, 1])
+    with col_example:
+        st.write("")
+        st.write("")
+        use_example = st.button("Charger un exemple")
+
     doc_text = ""
     if upload_mode == "Coller le texte":
         doc_text = st.text_area(
             "Collez le contenu du document ici :",
             height=300,
+            value=EXEMPLE_FACTURE if use_example else "",
             placeholder="FACTURE N° FAC-2024-0891\nFournisseur : TechSolutions SAS..."
         )
     else:
@@ -220,6 +244,8 @@ with tab1:
         st.divider()
         st.metric("Temps d'analyse", f"{r['duree']:.1f}s")
         afficher_resultat_document(r)
+        with st.expander("Voir les données brutes (JSON)"):
+            st.json({"type": r["type"], "confiance": r["confiance"], "donnees": r["donnees"]})
 
 
 # === ONGLET 2 : Mode Batch ===
