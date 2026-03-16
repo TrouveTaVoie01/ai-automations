@@ -1,0 +1,233 @@
+{
+  "name": "Email Classifier - Classification automatique",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "classify-email",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-1",
+      "name": "Webhook - Réception Email",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $env.ANTHROPIC_API_KEY }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-20250514\",\n  \"max_tokens\": 500,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyse cet email et réponds UNIQUEMENT avec un JSON valide. Email: {{ $json.body.email }}. Format: {\\\"categorie\\\": \\\"Support|Commercial|Facturation|RH|Spam|Urgent\\\", \\\"confiance\\\": 0.95, \\\"raison\\\": \\\"explication courte\\\", \\\"brouillon_reponse\\\": \\\"réponse suggérée\\\"}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "claude-1",
+      "name": "Claude - Classification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extraire la réponse de Claude et parser le JSON\nconst response = $input.first().json;\nconst textContent = response.content[0].text;\nconst classification = JSON.parse(textContent);\n\n// Ajouter l'email original\nclassification.email_original = $('Webhook - Réception Email').first().json.body.email;\nclassification.timestamp = new Date().toISOString();\n\nreturn [{ json: classification }];"
+      },
+      "id": "code-1",
+      "name": "Parser la réponse",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "condition-urgent",
+              "leftValue": "={{ $json.categorie }}",
+              "rightValue": "Urgent",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-urgent",
+      "name": "IF Urgent ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $env.ALERT_EMAIL }}",
+        "subject": "🚨 EMAIL URGENT - {{ $json.categorie }}",
+        "emailType": "text",
+        "message": "=Un email urgent a été détecté !\n\n📧 Email original :\n{{ $json.email_original }}\n\n📊 Classification :\n- Catégorie : {{ $json.categorie }}\n- Confiance : {{ $json.confiance }}\n- Raison : {{ $json.raison }}\n\n💡 Réponse suggérée :\n{{ $json.brouillon_reponse }}\n\n⏰ Détecté le : {{ $json.timestamp }}"
+      },
+      "id": "email-urgent",
+      "name": "Notification Email Urgent",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1300, 200]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $env.GOOGLE_SHEET_ID }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Emails",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $json.timestamp }}",
+            "email": "={{ $json.email_original }}",
+            "categorie": "={{ $json.categorie }}",
+            "confiance": "={{ $json.confiance }}",
+            "raison": "={{ $json.raison }}",
+            "brouillon_reponse": "={{ $json.brouillon_reponse }}"
+          }
+        },
+        "options": {}
+      },
+      "id": "gsheet-1",
+      "name": "Log Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1300, 400]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "respond-1",
+      "name": "Répondre au webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1550, 300]
+    }
+  ],
+  "connections": {
+    "Webhook - Réception Email": {
+      "main": [
+        [
+          {
+            "node": "Claude - Classification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude - Classification": {
+      "main": [
+        [
+          {
+            "node": "Parser la réponse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser la réponse": {
+      "main": [
+        [
+          {
+            "node": "IF Urgent ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Urgent ?": {
+      "main": [
+        [
+          {
+            "node": "Notification Email Urgent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notification Email Urgent": {
+      "main": [
+        [
+          {
+            "node": "Log Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Google Sheet": {
+      "main": [
+        [
+          {
+            "node": "Répondre au webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "email-classifier",
+      "id": "1"
+    },
+    {
+      "name": "ai-automation",
+      "id": "2"
+    }
+  ]
+}
